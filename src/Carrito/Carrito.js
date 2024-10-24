@@ -37,7 +37,7 @@ function Carrito() {
 
             try {
                 // Enviar el carrito al servidor
-                await axios.post('http://localhost:3001/api/pedido', {
+                await axios.post('https://virtuallifebackend.vercel.app/api/pedido', {
                     id_usuario: userId,
                     items: orderItems
                 }, {

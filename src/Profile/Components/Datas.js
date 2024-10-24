@@ -43,7 +43,7 @@ function Datas() {
         }
 
         // Obtiene los datos del usuario que ha iniciado sesion
-        const response = await axios.get('http://localhost:3001/api/userActive', {
+        const response = await axios.get('https://virtuallifebackend.vercel.app/api/userActive', {
           headers: {
             // Añadimos el token a la cabecera
             Authorization: `Bearer ${token}` 
@@ -80,7 +80,7 @@ function Datas() {
       const token = localStorage.getItem('token');
       // Enviar los datos modificados
       await axios.put(
-        'http://localhost:3001/api/updateUser', editedUser, 
+        'https://virtuallifebackend.vercel.app/api/updateUser', editedUser, 
         {
           headers: {
             Authorization: `Bearer ${token}`, 

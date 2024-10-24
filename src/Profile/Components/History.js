@@ -14,7 +14,7 @@ function History() {
         const token = localStorage.getItem('token'); 
 
         // Recogemos el historial de compra de la base de datos.
-        const response = await axios.get('http://localhost:3001/api/history', {
+        const response = await axios.get('https://virtuallifebackend.vercel.app/api/history', {
             headers: {
               // Incluimos el token en los headers
                 Authorization: `Bearer ${token}` 

@@ -20,7 +20,7 @@ function Wishlist() {
         const token = localStorage.getItem('token'); 
 
         // Recogemos los datos de wishlist
-        const response = await axios.get('http://localhost:3001/api/wishlist', {
+        const response = await axios.get('https://virtuallifebackend.vercel.app/api/wishlist', {
           headers: {
             // Incluimos el token en los headers
             Authorization: `Bearer ${token}` 
@@ -43,7 +43,7 @@ function Wishlist() {
     const token = localStorage.getItem('token'); 
     try {
       // Eliminamos en funcion del ID del producto elegido.
-      await axios.delete(`http://localhost:3001/api/wishlist/${productId}`, {
+      await axios.delete(`https://virtuallifebackend.vercel.app/api/wishlist/${productId}`, {
         headers: {
           // Incluimos el token en los headers
           Authorization: `Bearer ${token}` 

@@ -30,7 +30,7 @@ function Registro() {
     
     try {
       // Enviamos los datos al back mediante Axios.
-      const response = await axios.post('http://localhost:3001/api/registro', { email, password, nombre, apellido, direccion, dni });
+      const response = await axios.post('http://https://virtuallifebackend.vercel.app/api/registro', { email, password, nombre, apellido, direccion, dni });
 
       // Redirigimos a la home una vez completado el registro.
       navigate('/')

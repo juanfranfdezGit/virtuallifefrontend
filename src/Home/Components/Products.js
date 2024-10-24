@@ -21,7 +21,7 @@ function Products() {
     const fetchProducts = async () => {
       try {
         // Recogemos los datos del back
-        const response = await axios.get('http://localhost:3001/api/productos');
+        const response = await axios.get('https://virtuallifebackend.vercel.app/api/productos');
         // Actualizamos los productos
         setProducts(response.data);
         // Inicialmente los productos filtrados son todos, al seleccionar 
@@ -65,7 +65,7 @@ function Products() {
   
       try {
         // Comprobamos si el producto ya está en la lista
-        const response = await axios.get(`http://localhost:3001/api/wishlist/${productId}`, {
+        const response = await axios.get(`https://virtuallifebackend.vercel.app/api/wishlist/${productId}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
@@ -76,7 +76,7 @@ function Products() {
           alert('Este producto ya está en tu lista de deseos.');
         } else {
           // Si no está en la wishlist, lo añadiremos
-          await axios.post('http://localhost:3001/api/wishlist', { productId }, {
+          await axios.post('https://virtuallifebackend.vercel.app/api/wishlist', { productId }, {
             headers: {
               Authorization: `Bearer ${token}`,
             }
