@@ -21,7 +21,7 @@ function Login(){
     
     try {
       // Lanzamos los datos para intentar loguear
-      const response = await axios.post('https://virtuallifebackend.vercel.app/api/login', { email, password });
+      const response = await axios.post('https://virtuallifebackend.onrender.com/api/login', { email, password });
 
       // Si tenemos exito recibimos el token de sesion
       const { token } = response.data;

@@ -23,7 +23,7 @@ function Navbar() {
 
     // Si existe recogemos los datos del usuario activo
     if (token) {
-        axios.get('https://virtuallifebackend.vercel.app/api/userActive', {
+        axios.get('https://virtuallifebackend.onrender.com/api/userActive', {
             headers: {
               // Añadimos el token en la cabecera
                 Authorization: `Bearer ${token}`

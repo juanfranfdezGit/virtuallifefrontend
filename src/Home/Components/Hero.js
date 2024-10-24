@@ -19,7 +19,7 @@ function Hero() {
     const fetchProducts = async () => {
       try {
         // Obtenemos los productos de la API
-        const response = await axios.get('https://virtuallifebackend.vercel.app/api/heroProductos');
+        const response = await axios.get('https://virtuallifebackend.onrender.com/api/heroProductos');
         // Actualizamos el estado de los productos
         setProducts(response.data);
       } catch (error) {
@@ -55,7 +55,7 @@ function Hero() {
 
     try {
       // Comprobamos si el producto ya está en la wishlist
-      const response = await axios.get(`https://virtuallifebackend.vercel.app/api/wishlist/${productId}`, {
+      const response = await axios.get(`https://virtuallifebackend.onrender.com/api/wishlist/${productId}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         }
@@ -66,7 +66,7 @@ function Hero() {
         alert('Este producto ya está en tu lista de deseos.');
       } else {
         // Si no está en la wishlist, lo añadimos
-        await axios.post('https://virtuallifebackend.vercel.app/api/wishlist', { productId }, {
+        await axios.post('https://virtuallifebackend.onrender.com/api/wishlist', { productId }, {
           headers: {
             Authorization: `Bearer ${token}`,
           }
